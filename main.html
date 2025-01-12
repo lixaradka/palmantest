@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palman's Watch Shop</title>
+    <link rel="stylesheet" href="../static/main.css">
+    <link rel="icon" href="../imgs/photo_2024-11-20 19.23.53.jpeg">
+</head>
+
+<body>
+
+    <div class="top-promo">
+        <div class="promo-title">
+            <p>Get a discount using promo "winter" until 10.12</p>
+        </div>
+    </div>
+
+    <div class="top-nav">
+        <div class="wrapper">
+            <div class="top-inner">
+                <div class="text-inner">
+                    <img style="width: 60px;padding-top: 10px;" src="../imgs/logo.jpg" alt="">
+
+                    <a href="../templates/main.html">Home</a>
+
+                    <div class="catalog" style="position: relative">
+
+                        <a href="../templates/catalog.html">Catalog</a>
+
+                        <img class="popup-btn"
+                            style="width: 14px; position: absolute; bottom: 2.5px; left: 66px;transition: transform 0.3s;cursor: pointer;"
+                            src="../imgs/down.png" alt="">
+                    </div>
+
+
+                    <div class="popup-cat">
+                        <div class="popup-nav">
+                            <a href="../templates/catalog.html?filter=mechanical">Mechanical Watches</a>
+                            <a href="../templates/catalog.html?filter=quartz">Quartz Watches</a>
+                            <a href="../templates/catalog.html?filter=waterproof">Waterproof Watches</a>
+                        </div>
+                    </div>
+
+                    <a>Wholesale</a>
+                </div>
+
+
+                <div class="right-side">
+
+                    <div class="lang-toogle">
+                        <h4>English</h4>
+                        <label class="switch">
+                            <input id="language-checkbox" type="checkbox">
+                            <span class="slider1"></span>
+                        </label>
+                        <h4>Polish</h4>
+                    </div>
+
+                    <div id="bag-btn">
+                        <img style="width: 32px; cursor: pointer;" src="../imgs/Frame.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div id="overlay" class="overlay hidden"></div>
+
+            <div class="acc form-container" id="login-form" style="display: none;">
+                <form class="form_container" id="loginForm">
+                    <div class="logo_container"><img src="../imgs/logo.jpg" alt=""></div>
+                    <div class="title_container">
+                        <p class="title">Login to your Account</p>
+                        <span style="display: flex;" class="subtitle">
+                            <div class="dont-have">Don't have an account?</div>
+                            <button type="button" class="create-account_btn" id="create-account-btn">
+                                <span>Create New Account</span>
+                            </button>
+                        </span>
+                    </div>
+                    <br>
+                    <div class="input_container">
+                        <label class="input_label" for="email_field">Email</label>
+                        <input placeholder="name@mail.com" title="Input title" name="email" type="email"
+                            class="input_field" id="email_field" required />
+                    </div>
+                    <div class="input_container">
+                        <label class="input_label" for="password_field">Password</label>
+                        <input placeholder="Password" title="Input title" name="password" type="password"
+                            class="input_field" id="password_field" minlength="6" required />
+                    </div>
+                    <button type="submit" class="sign-in_btn">
+                        <span>Sign In</span>
+                    </button>
+                </form>
+            </div>
+
+            <div class="bag">
+                <h3 style=" left: 40px; top: 20px; position: absolute;">Cart</h3>
+                <img id="back" src="../imgs/back.png" alt="">
+
+
+                <div class="text">There's nothing here yet.</div>
+
+                <div class="bag-list"></div>
+                <div class="total-price">
+                    <h4 style="padding-right: 10px;">Total: <h3><span id="price">0.00$</span></h3>
+                    </h4>
+                </div>
+                <div class="order">
+                    <div class="buy-button">
+                        <a id="buy-button" href="">Checkout</a>
+                    </div>
+                    <div style="margin-top: 40px!important;margin-bottom: 10px;" style="background: inherit;"
+                        class="buy-button" id="hover-button">
+                        <a style="color: #161C24;" href="../templates/catalog.html">Continue Shopping</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+
+
+    <div class="slider">
+        <div class="slider-content">
+            <img style="width: 500px;" src="../imgs/mechwatch.jpg" alt="">
+            <div class="slider-info">
+
+                <div class="title">
+                    <h1> Omega <br> Watch</h1>
+                </div>
+
+                <div class="box">
+                    <div class="sub-title">
+                        <h3>
+                            The Golden Soft GS-200Z-5 electronic door lock has a luxurious glossy shine, clear lines,
+                            and beautiful shapes.
+                        </h3>
+                        <h3 style="padding-top: 30px;">Perfect for everyday life and business meetings.</h3>
+                    </div>
+
+                    <div class="price-info">
+                        <div class="price">
+                            <p>Price</p>
+                            <h2>400$</h2>
+                        </div>
+                        <div class="buy-button">
+                            <a class="add-to-cart" data-id="Omega Watch" data-name="Oozoo Timepieces C10957"
+                                data-price="400" data-image="../imgs/mechwatch.jpg" id="buy-button" href="">Add to
+                                Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="price">
+
+        </div>
+
+        <div class="slider-content">
+            <img style="width: 500px;" src="../imgs/g-shok.png" alt="">
+            <div class="slider-info">
+
+                <div class="title">
+                    <h1>Casio<br> G-shok</h1>
+                </div>
+
+                <div class="box">
+                    <div class="sub-title">
+                        <h3>
+                            The Golden Soft GS-200Z-5 electronic door lock has a luxurious glossy shine, clear lines,
+                            and beautiful shapes.
+                        </h3>
+                        <h3 style="padding-top: 30px;">Suitable for installation on a wooden/interior door.</h3>
+                    </div>
+
+                    <div class="price-info">
+                        <div class="price">
+                            <p>Price</p>
+                            <h2>140$</h2>
+                        </div>
+                        <div class="buy-button">
+                            <a class="add-to-cart" data-id="CASIO" data-name="G-SHOK A159W" data-price="140"
+                                data-image="../imgs/g-shok.png" id="buy-button" href="">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slider-content">
+            <img style="width: 500px;" src="../imgs/mechwatch.jpg" alt="">
+            <div class="slider-info">
+
+                <div class="title">
+                    <h1 id="title">Golden Soft <br> GS-200Z-7 for Office</h1>
+                </div>
+
+                <div class="box">
+                    <div class="sub-title">
+                        <h3>
+                            The Golden Soft GS-200Z-5 electronic door lock has a luxurious glossy shine, clear lines,
+                            and beautiful shapes.
+                        </h3>
+                        <h3 style="padding-top: 30px;">Suitable for installation on a wooden/interior door.</h3>
+                    </div>
+
+                    <div class="price-info">
+                        <div class="price">
+                            <p>Price</p>
+                            <h2>33000$</h2>
+                        </div>
+                        <div class="buy-button">
+                            <a class="add-to-cart" id="buy-button" href="">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="scroll-btn">
+            <img src="../imgs/left.png" alt="Previous Slide" class="prev">
+            <img src="../imgs/right.png" alt="Next Slide" class="next">
+        </div>
+
+        <div class="dots">
+        </div>
+    </div>
+
+    <div class="about-us">
+        <div class="about-inner">
+            <div class="about-box">
+                <div class="info1">
+                    <h1>252</h1>
+                </div>
+                <div class="info2">
+                    Happy Clients
+                </div>
+            </div>
+            <div style="padding-left: 10px;" class="about-box">
+                <div class="info1">
+                    <h1>7</h1>
+                </div>
+                <div class="info2">
+                    Products to Choose From
+                </div>
+            </div>
+            <div class="about-box">
+                <div class="info1">
+                    <h1>2</h1>
+                </div>
+                <div class="info2">
+                    Years on the Market
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="choose">
+        <h1 id="title">Why Palmen?</h1>
+        <div class="choose-inner">
+            <div class="choose-box">
+                <img src="../imgs/product-return 1.png" alt="">
+                <p>Double the cost of each lock is refunded in case of defect.</p>
+            </div>
+
+            <div class="choose-box">
+                <img src="../imgs/delivery.jpg" alt="">
+                <p>Double the cost of each lock is refunded in case of defect.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="category">
+        <h1 style="text-align: center;" id="title">Categories</h1>
+        <div class="category-inner">
+            <div class="category-box">
+                <div class="info">
+                    <h3>Waterproof</h3>
+                    <div class="buy-button" id="hover-button">
+                        <a href="">Go to</a>
+                    </div>
+                </div>
+                <img src="../imgs/cat-watch.jpg" alt="">
+            </div>
+
+            <div class="category-box">
+                <div class="info">
+                    <h3>Mechanical</h3>
+                    <div class="buy-button" id="hover-button">
+                        <a href="">Go to</a>
+                    </div>
+                </div>
+                <img src="../imgs/cat-watch.jpg" alt="">
+            </div>
+
+            <div class="category-box">
+                <div class="info">
+                    <h3>Quartz</h3>
+                    <div class="buy-button" id="hover-button">
+                        <a href="">Go to</a>
+                    </div>
+                </div>
+                <img src="../imgs/cat-watch.jpg" alt="">
+            </div>
+
+            <div class="category-box">
+                <div class="info">
+                    <h3>Colorful</h3>
+                    <div class="buy-button" id="hover-button">
+                        <a href="">Go to</a>
+                    </div>
+                </div>
+                <img src="../imgs/cat-watch.jpg" alt="">
+            </div>
+        </div>
+        <div style="margin: 0 auto;margin-top: 50px;position: block; " class="buy-button">
+            <a id="buy-button" href="../html/catalog.html">All Categories</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-box">
+            <div class="logo">
+                <img src="../imgs/logo.jpg" alt="">
+            </div>
+            <div class="nav">
+                <h3 style="color: white;">Navigation</h3>
+                <a href="">Home</a>
+                <a href="../html/catalog.html">Catalog</a>
+                <a>Wholesale</a>
+            </div>
+        </div>
+
+        <div class="year">
+            © 2021 Palmen All rights reserved.
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html> 
