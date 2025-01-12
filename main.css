@@ -1,0 +1,1172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+/* Общий CSS */
+* {
+    margin: 0; 
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.parent-bag {
+    position: absolute;
+    width: 100vh;
+    height: 100vh;
+
+    background-color: #161C24;
+    z-index: 1000;
+}
+
+@font-face {
+    font-weight: 400;
+    font-family: "San Francisco Pro Text";
+    src: url(../fonts/SFProText-Regular.ttf);
+}
+
+@font-face {
+    font-weight: 300;
+    font-family: "San Francisco Pro Text";
+    src: url(../fonts/SFProText-Light.ttf);
+}
+
+@font-face {
+    font-weight: 600;
+    font-family: "San Francisco Pro Text";
+    src: url(../fonts/SFProText-SemiBold.ttf);
+} 
+
+@font-face {
+    font-weight: 500;
+    font-family: "San Francisco Pro Text";
+    src: url(../fonts/SFProText-Medium.ttf);
+}
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    font-family: "San Francisco Pro Text";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 34px;
+    color: rgba(22, 28, 36, 1);
+}
+
+h4 {
+    font-family: "San Francisco Pro Text";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba(22, 28, 36, 1);
+}
+
+.top-promo {
+    width: 100%;
+    height: 50px;
+    background-color: #454F5B;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    max-width: 85%;
+    margin: 0  auto;
+}
+
+.promo-title p{
+    color: white;
+    font-family: 'San Francisco Pro Text';
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.top-nav {
+    width: 100%;
+    height: 85px;
+    border-bottom: 0.1px solid #454F5B;
+    z-index: 1000;
+}
+
+.top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+}
+
+.top-nav a{
+    font-family: 'San Francisco Pro Text';
+    font-weight: 300;
+    color: #161C24;
+
+    cursor: pointer;
+}
+
+.text-inner {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#bag-btn {
+    width: 32px;
+    height: 32px; 
+    position: relative;
+}
+
+.lang-toogle {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+
+
+
+
+/* From Uiverse.io by RaspberryBee */ 
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 2.5em;
+    height: 1.5em;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider1 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(182, 182, 182);
+    transition: .4s;
+    border-radius: 10px;
+  }
+  
+  .slider1:before {
+    position: absolute;
+    content: "";
+    height: 1em;
+    width: 1em;
+    border-radius: 8px;
+    left: 0.3em;
+    bottom: 0.3em;
+    transform: rotate(270deg);
+    background-color: rgb(255, 255, 255);
+    transition: .4s;
+  }
+  
+  .switch input:checked + .slider1 {
+    background-color: #21cc4c;
+  }
+  
+  .switch input:focus + .slider1 {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  .switch input:checked + .slider1:before {
+    transform: translateX(1em);
+  }
+
+
+
+
+
+
+  .right-side {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .acc {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: not-allowed;
+  }
+
+  .acc_name {
+    font-family: 'San Francisco Pro Text';
+    font-weight: 500;
+  }
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider-content {
+    display: none; /* Скрываем все слайды */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-content.active {
+    display: flex; /* Показываем только активный слайд */
+}
+
+.scroll-btn {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    z-index: 2;
+}
+
+.scroll-btn img {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+}
+
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dot-span {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ADD7FF;
+    border-radius: 50%
+}
+
+.dots span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #ADD7FF;
+    transition: background-color 1s ease;
+}
+ 
+.dots .active {
+    background-color: #4295E4; /* Цвет активной точки */
+    padding: 1px;
+}
+
+
+/* Дополнительная информация о слайде */
+.slider-info {
+    width: 606px;
+    height: 433px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 70px;
+}
+
+.slider-content .title {
+    width: 100%;
+    height: 124px;
+}
+
+h1 {
+    font-family: 'San Francisco Pro Text';
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 62px;
+    color: #161C24;
+}
+
+.slider-content .sub-title {
+    width: 287px;
+    height: 136px;
+}
+
+.slider-content img {
+    width: 500px;
+    padding-left: 200px;
+}
+
+.slider-content .sub-title h3{
+    font-family: 'San Francisco Pro Text';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #454F5B;
+}
+
+.price-info {
+    width: 220px;
+    height: 121px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 40px;
+}
+
+.price-info .price {
+    width: 100px;
+    height: 30px;
+}
+
+.price-info .price p {
+    font-family: 'San Francisco Pro Text';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #454F5B;
+}
+
+h2 {
+    font-family: 'San Francisco Pro Text';
+    font-weight: 600;
+    font-size: 24px;
+    color: #161C24;
+    padding-top: 10px;
+}
+
+.buy-button {
+    width: 220px;
+    background-color: #4295E4;
+    margin-top: 40px;
+    height: 50px;
+
+    margin-bottom: 10px;
+}
+
+.buy-button a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    font-family: 'San Francisco Pro Text';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid transparent;
+
+    transition: 0.5s;
+}
+
+.buy-button :hover {
+    color: #4295E4;
+    background-color: white;
+    border: 1px solid #4295E4;
+    cursor:  pointer !important;
+}
+
+
+.about-us {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    width: 100%;
+    height: 160px;
+    background-color: #F2F8FF;
+    border-top: 2px solid #1b7fde;
+    border-bottom: 2px solid #1b7fde;
+
+    display: flex;
+    align-items: center;
+}
+
+.about-inner {
+    width: 615px;
+    height: 82px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;;
+}
+
+.about-box {
+    text-align: center;
+    width: 180px;
+    height: 80px;
+    position: relative;
+}
+
+.about-box h1 {
+    font-family: 'San Francisco Pro Text';
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+    color: #161C24;
+}
+
+.about-box .info2 {
+    font-family: 'San Francisco Pro Text';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    color: #454F5B;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.choose {
+    width: 820px;
+    height: 344px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.choose-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 70px;
+    gap: 10px;
+}
+
+.choose-box {
+    width: 393px;
+    height: 226px;
+    border-left: 1px solid #C4CDD5;
+    border-right: 1px solid #C4CDD5;
+}
+
+.choose img {
+    padding-top: 20px;
+    width: 82px;
+}
+
+.choose p {
+    font-family: "San Francisco Pro Text";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #454F5B;
+
+    width: 345px;
+
+    margin: 0 auto;
+
+    padding-top: 30px;
+}
+
+.category {
+    padding-top: 80px;
+    width: 1100px;
+    height: 1106px;
+    margin: 0 auto;
+}
+
+.category-inner {
+    width: 100%;
+    height: 980px;
+    display: flex;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+
+.category-box {
+    width: 500px;
+    height: 400px;
+
+    position: relative;
+
+    background-color: rgba(0, 0, 0, 0.04);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.category-box .info {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+
+    width: 220px;
+    height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.category-box .info h3{
+    font-family: "San Francisco Pro Text";
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 34px;
+    color: #161C24;
+}
+
+.category-box a {
+    color: #161C24;
+}
+
+#hover-button {
+    background-color: inherit;
+    border: 1px solid #454F5B;
+    border-radius: 2px;
+    margin: 0;
+
+    transition: 0.5s;
+}
+
+#hover-button a:hover{
+    color: white !important;
+    background-color: #454F5B;
+    border: none;
+}
+
+.category-box img {
+    width: 250px;
+    height: 200px;
+
+    position: absolute;
+    right: 20px;
+    top: 50px;
+}
+
+.footer {
+    width: 100%;
+    height: 350px;
+    background-color: #0D2436;
+    margin-top: 150px;
+
+
+    color: white;
+}
+
+.footer-box {
+    width: 85%;
+    height: 250px;
+    margin: 0 auto;
+    padding-top: 50px;
+    display: flex;
+}
+
+.footer .logo img{
+    width: 105px;
+    height: 90px;
+}
+
+.footer .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 50px;
+
+    width: 140px;
+    height: 200px;
+}
+
+.nav h3 {
+    font-family: "San Francisco Pro Text";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.nav a {
+    font-family: 'San Francisco Pro Text';
+    font-weight: 300;
+
+    cursor: pointer;
+}
+
+.year {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+
+    color: rgb(152, 152, 152);
+
+    border-top: 1px solid rgb(152, 152, 152);
+
+    font-family: 'San Francisco Pro Text';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.popup-cat {
+    width: 750px;
+    position: absolute;
+    top: 120px; /* Расстояние от кнопки до меню */
+    left: 340px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+
+    overflow: hidden;
+    height: 0; /* Начальная высота */
+    opacity: 0; /* Прозрачное в скрытом состоянии */
+    transition: height 0.3s ease, opacity 0.3s ease; /* Плавное изменение высоты и прозрачности */
+}
+
+.popup-cat.active {
+    height: 180px; /* Высота для видимого состояния */
+    opacity: 1; /* Полная видимость */
+}
+
+.popup-nav {
+    padding-left: 10px;
+    width: 300px;
+}
+
+.popup-nav a {
+    display: block;
+    color: #161C24;
+    text-decoration: none;
+    font-family: 'San Francisco Pro Text';
+    font-weight: 300;
+    padding: 15px;
+
+    position: relative;
+}
+
+.popup-nav a:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #1b7fde;
+    transition: all 0.5s;
+  }
+  
+.popup-nav a:hover:after {
+    width: 100%;
+  }
+
+.popup-btn.open {
+    transform: rotate(180deg); /* Поворот на 180 градусов */
+}
+
+.bag-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 100px !important;
+}
+
+.text {
+    font-family: "San Francisco Pro Text";
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 34px;
+    color: rgba(22, 28, 36, 1);
+ 
+    margin: 0 auto;
+    width: 300px;
+    text-align: center;
+    padding-top: 100px;
+
+    display: none;
+}
+
+.text.active {
+    display: block;
+}
+
+.title h1{
+    text-transform: uppercase;
+    font-weight: 500 !important;
+}
+
+.bag {
+    display: none;
+    overflow-y: auto;
+    width: 830px;
+    max-height: 80vh;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 3000;
+
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Прозрачное в скрытом состоянии */
+    transition: height 0.5s ease, transform 0.5s ease; /* Плавное изменение высоты и прозрачности */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bag.active {
+    display: block;
+    opacity: 1;
+}
+
+.bag::-webkit-scrollbar {
+    display: none;
+}
+
+/* Скрыть скроллбар для Firefox */
+.bag {
+    scrollbar-width: none; /* Firefox */
+}
+
+#back {
+    width: 20px;
+    position: absolute;
+    right: 40px;
+    top: 30px;
+
+    cursor: pointer;
+}
+
+.bag-item {
+    width: 750px;
+    height: 120px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-around;
+
+    padding: 17px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.bag-item.remove {
+    display: none;
+}
+
+.bag-item img {
+    width: 120px;
+    height: 120px;
+}
+
+.item-info {
+    width:  550px;
+    height: 26px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.basket {
+    width: 100px;
+    height: 26px;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.basket img {
+    width: 24px;
+    height: 24px;
+    border: none;
+}
+
+.basket h4 {
+    color: rgba(66, 149, 228, 1);
+}
+
+.item-info2 {
+    width:  550px;
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-box {
+    width: 550px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.total-price {
+    width: 100%;
+    height: 30px;
+    text-align: left;
+
+
+    display: flex;
+    align-items: baseline;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.total-price h4 {
+    padding-left: 50px;
+}
+
+.amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 110px;
+    height: 32px;
+}
+
+.amount img {
+    width: 16px;
+    height: 16px;
+    border: none;
+
+    cursor: pointer;
+}
+
+.number {
+    width: 60px;
+    height: 32px;
+    border: 1px solid #EAEAEA;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order {
+    width: 750px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bag-counter {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: -3px; /* Позиционируем счетчик относительно картинки */
+    right: -2px;
+    background-color: #4295E4;
+    color: white;
+    border-radius: 50%; /* Делаем круглый счетчик */
+    font-size: 12px; /* Размер шрифта */
+    line-height: 12px;
+    font-weight: 500;
+
+    font-family: "Roboto";
+
+    border: 1px solid #FFFFFF;
+
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Центрируем текст вертикально */
+}
+
+
+
+
+
+
+
+/* Фон, перекрывающий весь экран */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    z-index: 999;
+    display: none; /* Изначально скрыт */
+}
+
+.overlay.visible {
+    display: block; /* Отображается при активации */
+}
+
+/* From Uiverse.io by Maximinodotpy */ 
+/* From Uiverse.io by kamehame-ha */ 
+.coolinput {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  position: static;
+  max-width: 240px;
+}
+
+.coolinput label.text {
+  font-size: 0.75rem;
+  color: #8B8E98;
+  font-weight: 600;
+  position: relative;
+  top: 0.5rem;
+  margin: 0;
+  padding: 0 3px;
+  background: none;
+  width: fit-content;
+}
+
+.coolinput input[type=text].input {
+  padding: 11px 10px;
+  font-size: 0.75rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  background: none;
+}
+
+.coolinput input[type=text].input:focus {
+  outline: none;
+}
+
+/* Форма входа */
+#login-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    display: none; /* Изначально скрыта */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#login-form.visible {
+    display: block; /* Отображается при нажатии */
+}
+
+
+
+  #login-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#login-form.hidden {
+    display: none; /* Форма изначально скрыта */
+}
+
+#login-form.visible {
+    display: block; /* Отображается при нажатии */
+}
+
+/* From Uiverse.io by zanina-yassine */ 
+.form_container {
+    width: 400px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 50px 40px 20px 40px;
+    background-color: #ffffff;
+    box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.01),
+      0px 59px 36px rgba(0, 0, 0, 0.05), 0px 26px 26px rgba(0, 0, 0, 0.09),
+      0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 11px;
+    font-family: "Inter", sans-serif;
+    z-index: 20000;
+  }
+  
+  .logo_container img{
+    box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(180deg, rgba(248, 248, 248, 0) 50%, #F8F8F888 100%);
+    border: 1px solid #F7F7F8;
+    filter: drop-shadow(0px 0.5px 0.5px #EFEFEF) drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+    border-radius: 11px;
+  }
+  
+  .title_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #212121;
+  }
+  
+  .subtitle {
+    font-size: 0.725rem;
+    max-width: 100%;
+    gap: 15px;
+    text-align: center;
+    line-height: 1.1rem;
+    color: #8B8E98;
+    padding-top: 10px;
+  }
+  
+  .input_container {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    z-index: 99;
+    left: 12px;
+    bottom: 9px;
+    transform: scale(1);
+  }
+  
+  .input_label {
+    font-size: 0.75rem;
+    color: #8B8E98;
+    font-weight: 600;
+  }
+  
+  .input_field {
+    width: auto;
+    height: 40px;
+    padding: 0 0 0 40px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid #e5e5e5;
+    filter: drop-shadow(0px 1px 0px #efefef)
+      drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+  }
+  
+  .input_field:focus {
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 0px 2px #242424;
+    background-color: transparent;
+  }
+  
+  .sign-in_btn {
+    width: 100%;
+    height: 40px;
+    border: 0;
+    background: #1b7fde;
+    border-radius: 7px;
+    outline: none;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  #auth-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    display: none; /* Initially hidden */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+  
+  .sign-in_ggl {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #ffffff;
+    border-radius: 7px;
+    outline: none;
+    color: #242424;
+    border: 1px solid #e5e5e5;
+    filter: drop-shadow(0px 1px 0px #efefef)
+      drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+    cursor: pointer;
+  }
+  
+  .sign-in_apl {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #212121;
+    border-radius: 7px;
+    outline: none;
+    color: #ffffff;
+    border: 1px solid #e5e5e5;
+    filter: drop-shadow(0px 1px 0px #efefef)
+      drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+    cursor: pointer;
+  }
+  
+  .separator {
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 30px;
+    color: #8B8E98;
+  }
+  
+  .separator .line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background-color: #e8e8e8;
+  }
+  
+  .note {
+    font-size: 0.75rem;
+    color: #8B8E98;
+    text-decoration: underline;
+  }
+
+  .create-account_btn {
+    cursor: pointer;
+    text-decoration: underline;
+    border: none;
+    background: none;
+  }
+
