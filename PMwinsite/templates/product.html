@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="../static/main.css">
+    <link rel="stylesheet" href="../static/product.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="top-product">
+        <div class="back-btn"><a href="../templates/catalog.html"><img id="back-to-cat" src="../imgs/back.png" alt=""></a></div>   
+        <div><h3 class="product-name" id="product-name-1">Loading...</h3></div>
+    </div>
+
+    <div class="product">
+        <div class="gallary">
+            <div class="div-active-photo" id="product-image">
+                <img src="" alt="" id="main-product-img">
+            </div>
+            <div class="gallary-scroll" id="product-gallery">
+                <!-- Галерея будет подставляться динамически -->
+            </div>
+        </div>
+
+        <div class="about-product">
+            <div class="product-name" id="product-name">
+                <h2>Loading...</h2>
+            </div>
+            <div class="description">
+                <ul id="product-specs">
+                    <!-- Список характеристик будет вставляться сюда динамически -->
+                </ul>
+            </div>
+            <div style="width: 100%;" class="buy-button">
+                <a class="add-to-cart" data-id="Omega Watch" id="buy-button" href="">Add to cart</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; font-family: San Francisco Pro Text; gap: 10px;" id="cart-alert" class="cart-alert hidden">
+    <p>product added to cart successfully!</p>
+    <div style="text-decoration: underline; cursor: pointer;" id="show-cart">show cart</div>
+</div>
+
+<script src="../js/product.js"></script>
+</body>
+</html>

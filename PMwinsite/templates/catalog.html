@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM-winter-site</title>
+    <link rel="stylesheet" href="../static/main.css">
+    <link rel="stylesheet" href="../static/catalog.css">
+    <link rel="icon" href="../imgs/photo_2024-11-20 19.23.53.jpeg">
+</head>
+
+<body>
+
+    <div class="top-promo">
+        <div class="promo-title">
+            <p>Get a discount using promo "winter" until 10.12</p>
+        </div> 
+    </div>
+
+    <div class="top-nav">
+        <div class="wrapper">
+            <div class="top-inner">
+                <div class="text-inner">
+                    <img style="width: 60px;padding-top: 10px;" src="../imgs/logo.jpg" alt="">
+
+                    <a href="../templates/main.html">Home</a>
+
+                    <div class="catalog" style="position: relative">
+
+                        <a href="../templates/catalog.html">Catalog</a>
+
+                        <img class="popup-btn"
+                            style="width: 14px; position: absolute; bottom: 2.5px; left: 66px;transition: transform 0.3s;cursor: pointer;"
+                            src="../imgs/down.png" alt="">
+                    </div>
+
+
+                    <div class="popup-cat">
+                        <div class="popup-nav">
+                            <a href="../templates/catalog.html?filter=mechanical">Mechanical Watches</a>
+                            <a href="../templates/catalog.html?filter=quartz">Quartz Watches</a>
+                            <a href="../templates/catalog.html?filter=waterproof">Waterproof Watches</a>                            
+                        </div>
+                    </div>
+
+                    <a>Wholesale</a>
+                </div>
+
+
+                <div class="right-side">
+
+
+                    <div id="bag-btn">
+                        <img style="width: 32px; cursor: pointer;" src="../imgs/Frame.png" alt="">
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div id="overlay" class="overlay hidden"></div>
+
+
+
+            <div class="bag">
+                <h3 style=" left: 40px; top: 20px; position: absolute;">Cart</h3>
+                <img id="back" src="../imgs/back.png" alt="">
+
+
+                <div class="text">There's nothing here yet.</div>
+
+                <div class="bag-list"></div>
+                <div class="total-price">
+                    <h4 style="padding-right: 10px;">Total: <h3><span id="price">0.00$</span></h3>
+                    </h4>
+                </div>
+                <div class="order">
+                    <div class="buy-button">
+                        <a id="buy-button" href="">Checkout</a>
+                    </div>
+                    <div style="margin-top: 40px!important;margin-bottom: 10px;" style="background: inherit;"
+                        class="buy-button" id="hover-button">
+                        <a style="color: #161C24;" href="../templates/catalog.html">Continue Shopping</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="wrapper">
+            <div class="catalog-content">
+                <div class="filters">
+
+                    <div class="search">
+                        <form class="form">
+                            <button>
+                                <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                                    aria-labelledby="search">
+                                    <path
+                                        d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                                        stroke="currentColor" stroke-width="1.333" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <input id="search-input" class="input" placeholder="Search..." required="" type="text">
+                            <button class="reset" type="reset">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
+                                    </path>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="filter-inner">
+                        <div class="filter">
+                            <input type="checkbox" class="ui-checkbox" id="mechanical-checkbox">
+                            <label for="mechanical-checkbox">Mechanical</label>
+                        </div>
+                    
+                        <div class="filter">
+                            <input type="checkbox" class="ui-checkbox" id="quartz-checkbox">
+                            <label for="quartz-checkbox">Quartz</label>
+                        </div>
+                    
+                        <div class="filter">
+                            <input type="checkbox" class="ui-checkbox" id="waterproof-checkbox">
+                            <label for="waterproof-checkbox">Waterproof</label>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="card-inner">
+                    <div class="card" data-id="Omega Watch" id="omega-card" data-category="Mechanical Waterproof">
+                            <div class="card-image">
+                                <img id="card-image" src="../imgs/mechwatch.jpg" alt="">
+                            </div>
+ 
+                            <div class="card-info">
+                                <h3 class="card-title">OMEGA Aquaterra</h3>
+                                <p class="card-description">39mm, steel</p>
+                                <div class="show_more"><a>Details</a>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div  class="card" data-id="G-shock Watch" id="g-shock-card" data-category="Quartz Waterproof">
+                        <div class="card-image">
+                            <img style="width: 83%;" id="card-image" src="../imgs/g-shok.png" alt="">
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Casio G-Shock GA-B2100CY-1AER</h3>
+                            <p class="card-description">46mm, Carbon Core Guard structure</p>
+                            <div class="show_more"><a>Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" data-category="Mechanical">
+                        <div class="card-image">
+                            <img id="card-image" src="../imgs/tissot.jpg" alt="">
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">TISSOT POWERMATIC 80 SILICIUM</h3>
+                            <p class="card-description">40mm, steel</p>
+                            <div class="show_more"><a href="../templates/id-casioA159W.html">Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" data-category="Quartz Waterproof">
+                        <div class="card-image">
+                            <img style="width: 83%;" id="card-image" src="../imgs/g-shok.png" alt="">
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Casio G-Shock GA-B2100CY-1AER</h3>
+                            <p class="card-description">45mm, Carbon Core Guard structure</p>
+                            <div class="show_more"><a href="../templates/id-casioA159W.html">Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="margin-top: 1000px;" class="footer">
+        <div class="footer-box">
+            <div class="logo">
+                <img src="../imgs/logo.jpg" alt="">
+            </div>
+            <div class="nav">
+                <h3 style="color: white;">Navigation</h3>
+                <a href="">Home</a>
+                <a href="../html/catalog.html">Catalog</a>
+                <a>Wholesale</a>
+            </div>
+        </div>
+
+        <div class="year">
+            © 2021 Palmen All rights reserved.
+        </div>
+    </div>
+
+
+    <script src="../js/main.js"></script>
+    <script src="../js/catalog.js"></script>
+
+
+</body>
